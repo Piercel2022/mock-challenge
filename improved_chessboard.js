@@ -17,4 +17,4 @@ function generateChessboard(size){
     }
     return board.join('\n');
 }
-console.log(chessboard(8))
+console.log(generateChessboard(8));
