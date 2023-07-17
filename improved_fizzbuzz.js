@@ -1,19 +1,12 @@
 function fizzbuzz(n){
     if(!Number.isInteger(n) || n <= 0) return [];
     const results = Array.from({length: n}, (_, i) => {
-        let output = "";
-        if(isFizz(i + 1)) output = `${output}Fizz`;
-        if(isBuzz(i + 1)) output = `${output}Buzz`;
-        return output || i + 1;
+        let output = i + 1;
+        if((i + 1) % 15 === 0) output = 'FizzBuzz';
+        else if((i + 1) % 3 === 0) output = 'Fizz';
+        else if((i + 1) % 5 === 0) output = 'Buzz';
+        return output;
     });
     return results;
 }
-
-function isFizz(n) {
-    return n % 3 === 0;
-}
-
-function isBuzz(n) {
-    return n % 5 === 0;
-}
-    console.log(fizzbuzz(100));
+console.log(fizzbuzz(100));
