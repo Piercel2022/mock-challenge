@@ -1,9 +1,12 @@
-function fizzbuzz(){
-    for(let n = 1; n <= 100; n++){
-        let output = "";
-        if(n % 3 == 0) output += "Fizz";
-        if(n % 5 == 0) output += "Buzz";
-        console.log(output || n);
+
+    function fizzbuzz(n){
+        let results = [];
+        for(let i = 1; i <= n; i++){
+            let output = "";
+            if(i % 3 === 0) output = `${output}Fizz`;
+            if(i % 5 === 0) output = `${output}Buzz`;
+            results.push(output || i);
+        }
+        return results;
     }
-}
-fizzbuzz();
+    console.log(fizzbuzz(100));
