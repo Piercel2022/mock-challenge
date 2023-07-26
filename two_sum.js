@@ -11,3 +11,4 @@ function twoSum(nums, target)
 }
 nums = [2, 7, 11, 15]
 console.log(twoSum(nums, 9))
+//output [0, 1], because nums[0] + nums[1] = 9
