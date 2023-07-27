@@ -1,3 +1,11 @@
+/**
+ * This function has the purpose to search a target number in the array
+ * and use the binary search algorithm
+ * @param {*} nums 
+ * @param {*} target 
+ * @returns 
+ */
+
 
 const search = function (nums, target) {
     let low = 0;
