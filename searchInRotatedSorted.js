@@ -1,37 +1,37 @@
+
 const search = function (nums, target) {
     let low = 0;
     let high = nums.length - 1;
 
     while (low < high) {
         const middle = Math.floor((low + high) / 2);
-        if (nums[middle] == target) return middle;
+        if (nums[middle] === target) return middle;
 
-        // If the left side is ordered
-        if (nums[low] <= nums[middle]) {
-            // Number is in the left side
-            if (target >= nums[low] && target < nums[middle]) {
-                high = middle;
-            }
-            // Number is in the right side
-            else {
-                low = middle + 1;
-            }
-        }
-        // Right side is ordered
-        else {
-            // Number is in the right side
-            if (target > nums[middle] && target <= nums[high]) {
-                low = middle + 1;
-            }
-            // Number is in the left side
-            else {
-                high = middle;
-            }
+        switch (true) {
+            case nums[low] <= nums[middle]:
+                if (target >= nums[low] && target < nums[middle]) {
+                    high = middle;
+                }
+                else {
+                    low = middle + 1;
+                }
+                break;
+            default:
+                if (target > nums[middle] && target <= nums[high]) {
+                    low = middle + 1;
+                }
+                else {
+                    high = middle;
+                }
+                break;
         }
     }
 
-    // Reached the final number; return it if it matches the target, else target was not found
-    return nums[low] == target ? low : -1;
+    if (nums[low] === target) {
+        return low;
+    } else {
+        throw new Error('Target not found');
+    }
 };
 /**input = nums = [4,5,6,7,0,1,2], target = 0
  output = 4
