@@ -33,3 +33,7 @@ const search = function (nums, target) {
     // Reached the final number; return it if it matches the target, else target was not found
     return nums[low] == target ? low : -1;
 };
+// input = nums = [4,5,6,7,0,1,2], target = 0
+// output = 4
+nums = [4,5,6,7,0,1,2]
+console.log(search(nums, 0));
