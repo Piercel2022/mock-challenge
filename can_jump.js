@@ -5,17 +5,29 @@
 //Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
 // if nums = [2, 2, 0, 0, 4]  return false
 
+/**
+ * Determines if it is possible to reach the last index of the given array.
+ *
+ * @param {number[]} nums - The array of non-negative integers representing the maximum jump length at each position.
+ * @returns {boolean} - True if it is possible to reach the last index, false otherwise.
+ */
 function canJump(nums) {
-    let lastPosition = nums.length - 1;
+    if (!Array.isArray(nums) || !nums.every(Number.isInteger)) {
+        throw new Error('Input must be an array of integers');
+    }
+    
+    if (nums.length === 0) return false;
+    
+    let lastJumpableIndex = nums.length - 1;
 
     for (let i = nums.length - 2; i >= 0; i--) {
-      if (i + nums[i] >= lastPosition) {
-        lastPosition = i;
+      if (i + nums[i] >= lastJumpableIndex) {
+        lastJumpableIndex = i;
       }
     }
 
-    return lastPosition === 0;
-  }
+    return lastJumpableIndex === 0;
+}
 
   // Example usage:
   const nums1 = [2, 3, 1, 1, 4];
