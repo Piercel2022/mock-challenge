@@ -11,6 +11,8 @@ function hasCycle(head){
     //While the fastPointer is still in the linkedlist
     while(fastPointer !== null && fastPointer.next !== null){
 
+        fastPointer = fastPointer.next.next;
+
     }
 
 }
