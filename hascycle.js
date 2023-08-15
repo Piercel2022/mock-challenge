@@ -6,6 +6,7 @@ class Node{
 }
 
 function hasCycle(head){
+    let slowPointer = head, fastPointer = head;
 
 }
 
