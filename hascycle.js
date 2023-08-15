@@ -15,7 +15,7 @@ function hasCycle(head){
         // One speed
         slowPointer = slowPointer.next;
 
-        if(slowPointer == fastPointer){
+        if(slowPointer === fastPointer){
             return true;
         }
 
