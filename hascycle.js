@@ -8,6 +8,11 @@ class Node{
 function hasCycle(head){
     let slowPointer = head, fastPointer = head;
 
+    //While the fastPointer is still in the linkedlist
+    while(fastPointer !== null && fastPointer.next !== null){
+
+    }
+
 }
 
 //Test case1
