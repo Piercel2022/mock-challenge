@@ -41,7 +41,7 @@ const nodeRed = new Node('red', nodeBlue);
 const nodePurple = new Node('purple', nodeRed);
 const nodeOrange = new Node('orange', nodePurple);
 
-
+console.log(hasCycle(nodeOrange))//False
 
 
 
