@@ -20,6 +20,7 @@ function hasCycle(head){
         }
 
     }
+    return false;
 
 }
 
