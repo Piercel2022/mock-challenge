@@ -7,3 +7,7 @@ const checkPermission = (persmissions) => (ressource) => (action) => {
     return `Permission denied : ${action} on ${ressource}`;
 }
 
+const userPermissions = checkPermission({
+    files: ["read", "write"],
+    photos: ["read"]
+})
