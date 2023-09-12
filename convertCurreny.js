@@ -3,7 +3,7 @@ const convertCurrency = (conversionRate) => (fromCurrency) => (toCurrency) => (a
 {
     const convertedAmount = (
         amount * conversionRate[fromCurrency][toCurrency]
-    ).toFixed(2)
+    ).toFixed(3)
   return `${amount} ${fromCurrency} is equal to ${convertedAmount} ${toCurrency}`;
 
 }
