@@ -11,3 +11,5 @@ const userPermissions = checkPermission({
     files: ["read", "write"],
     photos: ["read"]
 })
+
+console.log(userPermissions("files")("read"));
